@@ -23,15 +23,24 @@
           (2) 稀疏性问题:用户基数大，标的物数量多,一般用户只对很少量的标的物产生操作行为，这是用户操作行为矩阵是非常稀疏的，标的物相似度不够精准。
 
 # 深度学习排序
-     Wide&Deep，DeepFM等。这些方法一般的思路是：
-        Embedding层 Embedding Vector 
-        多个全联接层，MLPs
-        sigmoid函数
-        0-1值，代表点击的概率
+     之前是用gbdt二分类，排序。
+     后来用深度学习Wide&Deep，DeepFM等。这些方法一般的思路是：
+                Embedding层 Embedding Vector 
+                多个全联接层，MLPs
+                sigmoid函数
+                0-1值，代表点击的概率
 
      Wide&Deep
-     
+       特征： user features (e.g., country, language, demographics)；
+             contextual features (e.g., device, hour of the day, day of the week)；
+             impression features (e.g., app age, historical statistics of an app).
+       Wide：线性系数*特征,特征的乘积
+       Deep：特征embedding->concate->全连接
+       logistc预测
+       
      DeepFM
+       采取Wide & Deep的框架，差异在于将Wide部分的LR替换为了FM
+       FM：一维特征concate高维特征相乘，
 
 
 # 今日头条
