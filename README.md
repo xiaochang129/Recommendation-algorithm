@@ -34,7 +34,7 @@
        特征： user features (e.g., country, language, demographics)；
              contextual features (e.g., device, hour of the day, day of the week)；
              impression features (e.g., app age, historical statistics of an app).
-       Wide：线性系数*特征,特征的乘积
+       Wide：特征,多个 两特征组 的笛卡尔积
        Deep：特征embedding->concate->全连接
        logistc预测
        
